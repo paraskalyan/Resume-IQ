@@ -48,9 +48,9 @@ const UploadFile = () => {
     };
 
     return (
-        <div className='flex  justify-between container mx-auto'>
+        <div className='flex flex-col items-center container mx-auto'>
             <div className='mt-20'>
-                <h2 className='text-2xl font-semibold'>Resume Generator</h2>
+                <h2 className='text-2xl font-semibold text-center'>Resume Generator</h2>
                 <form onSubmit={handleSubmit}>
                     {/* <div className=' p-4 border border-dashed h-30'>
                         <label>Upload Resume (PDF/DOCX):</label><br />
@@ -69,7 +69,7 @@ const UploadFile = () => {
 
                     <div>
                         <Label>Job Description:</Label><br />
-                        <Textarea placeholder='Paste Job Description' value={jobDescription} onChange={(e) => setJobDescription(e.target.value)} />
+                        <Textarea className='bg-white' placeholder='Paste Job Description' value={jobDescription} onChange={(e) => setJobDescription(e.target.value)} />
                     </div>
 
 

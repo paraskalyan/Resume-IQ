@@ -6,6 +6,10 @@ import ResumeEditor from './ResumeEditor';
 import EditableResumeViewer from './ResumeViewer';
 import FileDragDrop from './DragDrop';
 
+import { Textarea } from './ui/textarea'
+import { Label } from './ui/label'
+import { Button } from './ui/button'
+
 const UploadFile = () => {
     const [file, setFile] = useState(null);
     const [jobDescription, setJobDescription] = useState('');
@@ -21,7 +25,7 @@ const UploadFile = () => {
         }
 
         const formData = new FormData();
-        formData.append('resume', file);
+        formData.append('resume', file.file);
         formData.append('jobDescription', jobDescription);
 
         try {
@@ -46,7 +50,7 @@ const UploadFile = () => {
     return (
         <div className='flex  justify-between container mx-auto'>
             <div className='mt-20'>
-                <h2 className='text-2xl font-semibold my-5'>Resume Generator</h2>
+                <h2 className='text-2xl font-semibold'>Resume Generator</h2>
                 <form onSubmit={handleSubmit}>
                     {/* <div className=' p-4 border border-dashed h-30'>
                         <label>Upload Resume (PDF/DOCX):</label><br />
@@ -61,23 +65,17 @@ const UploadFile = () => {
                         />
                         <h6 className='text-gray-400 '>Drag and Drop file</h6>
                     </div> */}
-                    <FileDragDrop />
+                    <FileDragDrop file={file} setFile={setFile} />
 
-                    <div style={{ marginTop: '1rem' }}>
-                        <label>Job Description:</label><br />
-                        <textarea
-                            rows="6"
-
-                            className='border w-full p-2'
-                            value={jobDescription}
-                            onChange={(e) => setJobDescription(e.target.value)}
-                            required
-                        />
+                    <div>
+                        <Label>Job Description:</Label><br />
+                        <Textarea placeholder='Paste Job Description' value={jobDescription} onChange={(e) => setJobDescription(e.target.value)} />
                     </div>
 
-                    <button type="submit" disabled={loading} style={{ marginTop: '1rem' }}>
+
+                    <Button type="submit" disabled={loading} className='w-full mt-4 py-5 text-md'>
                         {loading ? 'Processing...' : 'Generate Resume'}
-                    </button>
+                    </Button>
                 </form>
             </div>
             <div>

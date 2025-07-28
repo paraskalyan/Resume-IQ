@@ -130,7 +130,7 @@ const sampleResumeData = {
 };
 
 const EditableResumeViewer = ({ initialData = jsonw }) => {
-    console.log(initialData)
+
     const [resumeData, setResumeData] = useState(initialData);
     const [zoomLevel, setZoomLevel] = useState(100);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -209,7 +209,7 @@ const EditableResumeViewer = ({ initialData = jsonw }) => {
         if (editingPersonal) {
             return (
                 <div className="text-center mb-8 p-4 border border-blue-300 rounded-lg bg-blue-50">
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="grid grid-cols-2 inter gap-4 mb-4">
                         <input
                             type="text"
                             value={resumeData.personal.name}
@@ -317,7 +317,7 @@ const EditableResumeViewer = ({ initialData = jsonw }) => {
         .sort((a, b) => a.order - b.order);
 
     return (
-        <div className={`bg-gray-50 min-h-screen ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
+        <div className={`bg-gray-50 min-h-screen  ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
             {/* Toolbar */}
             <div className="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
                 <div className="flex items-center space-x-4">
@@ -437,7 +437,7 @@ const EditableResumeViewer = ({ initialData = jsonw }) => {
                                             </div>
                                         </div>
                                     ) : (
-                                        <div className="prose prose-gray max-w-none">
+                                        <div className="prose prose-gray max-w-none inter">
                                             <div dangerouslySetInnerHTML={{ __html: parseMarkdown(section.content) }} />
                                         </div>
                                     )}

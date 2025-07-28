@@ -8,26 +8,7 @@ function Landing() {
     return (
         <div className="flex  flex-col min-h-screen">
             {/* Header */}
-            <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-                <Link className="flex items-center justify-center" href="#">
-                    <FileText className="h-6 w-6 mr-2" />
-                    <span className="font-bold">ResumeBuilder</span>
-                </Link>
-                <nav className="ml-auto flex gap-4 sm:gap-6">
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
-                        Features
-                    </Link>
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" href="#templates">
-                        Templates
-                    </Link>
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" href="#pricing">
-                        Pricing
-                    </Link>
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
-                        Contact
-                    </Link>
-                </nav>
-            </header>
+
 
             <main className="flex-1">
                 {/* Hero Section */}
@@ -35,11 +16,11 @@ function Landing() {
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                             <div className="flex flex-col justify-center space-y-4">
-                                <div className="space-y-2">
+                                <div className="space-y-6">
                                     <Badge variant="outline" className="w-fit">
-                                        🎯 ATS Analyzer + Resume Generator
+                                        ATS Analyzer + Resume Generator
                                     </Badge>
-                                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                                    <h1 className="text-3xl font-bold  sm:text-5xl xl:text-6xl/none">
                                         Analyze Your Resume & Generate Job-Tailored Versions
                                     </h1>
                                     <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -47,12 +28,12 @@ function Landing() {
                                         versions for any job description. Beat the bots and land more interviews.
                                     </p>
                                 </div>
-                                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                                    <Button size="lg" className="h-11">
+                                <div className="flex flex-col gap-6 min-[400px]:flex-row">
+                                    <Button size="lg" className="h-11 cursor-pointer">
                                         Check My ATS Score
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
-                                    <Button variant="outline" size="lg" className="h-11 bg-transparent">
+                                    <Button variant="outline" size="lg" className="h-11 cursor-pointer bg-transparent">
                                         See How It Works
                                     </Button>
                                 </div>
@@ -85,7 +66,7 @@ function Landing() {
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Everything You Need to Stand Out</h2>
+                                <h2 className="text-3xl font-bold sm:text-5xl">Everything You Need to Stand Out</h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     Our resume builder comes packed with features designed to help you create the perfect resume
                                 </p>
@@ -128,7 +109,7 @@ function Landing() {
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">How It Works</h2>
+                                <h2 className="text-3xl font-bold  sm:text-5xl">How It Works</h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     Get your professional resume ready in just three simple steps
                                 </p>
@@ -171,7 +152,7 @@ function Landing() {
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Professional Templates</h2>
+                                <h2 className="text-3xl font-bold  sm:text-5xl">Professional Templates</h2>
                                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                                     Choose from our carefully crafted templates designed by HR professionals
                                 </p>
@@ -231,22 +212,22 @@ function Landing() {
                 <section className="w-full py-12 md:py-24 lg:py-32">
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                            <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Trusted by Job Seekers Worldwide</h2>
+                            <div className="space-y-8">
+                                <h2 className="text-3xl font-bold  sm:text-5xl">Trusted by Job Seekers Worldwide</h2>
                                 <div className="flex items-center justify-center gap-8 text-muted-foreground">
                                     <div className="flex items-center gap-2">
                                         <Users className="h-5 w-5" />
-                                        <span className="text-2xl font-bold text-foreground">50K+</span>
+                                        <span className="text-3xl font-bold text-foreground">50K+</span>
                                         <span>Users</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <FileText className="h-5 w-5" />
-                                        <span className="text-2xl font-bold text-foreground">100K+</span>
+                                        <span className="text-3xl font-bold text-foreground">100K+</span>
                                         <span>Resumes Created</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                                        <span className="text-2xl font-bold text-foreground">4.9</span>
+                                        <span className="text-3xl font-bold text-foreground">4.9</span>
                                         <span>Rating</span>
                                     </div>
                                 </div>
@@ -260,7 +241,7 @@ function Landing() {
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
-                                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                                <h2 className="text-3xl font-bold  sm:text-5xl">
                                     Ready to Beat the ATS and Land More Interviews?
                                 </h2>
                                 <p className="max-w-[600px] text-primary-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -286,21 +267,7 @@ function Landing() {
                 </section>
             </main>
 
-            {/* Footer */}
-            <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-                <p className="text-xs text-muted-foreground">© 2024 ResumeBuilder. All rights reserved.</p>
-                <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-                    <Link className="text-xs hover:underline underline-offset-4" href="#">
-                        Terms of Service
-                    </Link>
-                    <Link className="text-xs hover:underline underline-offset-4" href="#">
-                        Privacy Policy
-                    </Link>
-                    <Link className="text-xs hover:underline underline-offset-4" href="#">
-                        Support
-                    </Link>
-                </nav>
-            </footer>
+
         </div>
     )
 }
